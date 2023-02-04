@@ -8,22 +8,23 @@
     <title>Weather API Call</title>
 </head>
 <body>
-    <h1>Project 1 - API Call for Weather</h1>
-    <div class="testing">
-        <h2 class="testing" id="test1"></h2>
-        <h2 class="testing" id="test2"></h2>
-        <h2 class="testing" id="test3"></h2>
-        <h2 class="testing" id="test4"></h2>
-    </div>
-
-    <form>
-        <input type= "text"
-                id="inputBar"
-                placeholder="enter city or zip code here"
-                value="">
-        <button type="searchButton" id="searchButton"></button>
-    </form>
-    
+    <div id="searchContainer">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="searchBtn">Search</button>
+        </div>
+          
+          <div id="resultContainer">
+            <p id="cityName"></p>
+            <p id="region"></p>
+            <p id="time"></p>
+            <p id="weather"></p>
+            <img id="weatherIcon">
+          </div>
+    <div class="credit">
+        <p>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+        <a href="https://www.weatherapi.com/" title="Free Weather API"><img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" border="0"></a>
+        </p>
+    </div> 
 <script src="script.js"></script>
 </body>
 </html>
