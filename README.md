@@ -20,3 +20,28 @@ Find a general layout of what my site will look like on Figma, although this is 
 - Correctly utilize the await operator instead of .then() in order to create a more elegant and readable design for my code. 
 - A weather API call is probably one of the most common projects of all beginner coders. Think about what I can do to make mine stand out!
 - Add an inspirational quote of the day at the bottom of my weather API
+
+###Designing my Site
+- Useful Properties for Divs: 
+    - display: flex;
+    - display: box;
+    - justify-content: space-between;
+    - text-shadow: 0 0 5px #17243280;
+    - color: #fff;
+    - textOverlay: #fff; (for links)
+    - backgroundCard: #fff;
+    - backgroundInverseOverlay: #0000008c;
+    - primaryButtonText: #fff
+    - font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    - font-size: 72px;
+    - line-height: 1.5;
+    - box-sizing: border-box;
+- body properties:
+    - margin: 0;
+    - display: block;
+    - background-attachment: fixed;
+    - position: absolute;
+    - width: 205px;
+    - height: 205px;
+    - padding: 27px 0;
+    - text-align: center;
