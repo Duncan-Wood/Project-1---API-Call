@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #F2F2F2;
+    background-image: url("https://faithbeliefforum.org/wp-content/uploads/2021/04/peace-mantra-pic-v2-1080x700.png");
+    background-size: 100%, 100%;
   }
 
 #searchContainer {
@@ -9,54 +11,53 @@ body {
     margin-top: 50px;
   }
   
-  #cityInput {
+#cityInput {
     padding: 10px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 10px #CECECE;
     margin-right: 10px;
-  }
+}
   
-  #searchBtn {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #3E8E41;
-    cursor: pointer;
-  }
-  #searchBtn:hover {
-    background-color: #3E8E41;
-  }
+#searchBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #3E8E41;
+  cursor: pointer;
+}
+#searchBtn:hover {
+  background-color: #3E8E41;
+}
   
-  #placeContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-  }
-  #weatherContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 50px;
-  }
-  p {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  #weatherIcon {
-    width: 100px;
-    height: 100px;
-  }
-  
-  #image {
-    width: 200px;
-    height: 200px;
-    margin-top: 20px;
-  }
-  
+#placeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+#weatherContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#weatherIcon {
+  width: 100px;
+  height: 100px;
+}
+
+#image {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+}

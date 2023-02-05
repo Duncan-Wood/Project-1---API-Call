@@ -52,7 +52,8 @@ searchBtn.addEventListener("click", async () => {
   console.log(quoteData)
 
   quote.innerHTML = quoteData.quoteText;
-  author.innerHTML = `-` + quoteData.quoteAuthor;
+  //added a ternary operator to my author code in which the author will get populated if it returns truthy, or if no author is provided it returns falsy and the word anonymous is placed.
+  author.innerHTML = `-` + (quoteData.quoteAuthor ? quoteData.quoteAuthor : "Anonymous");
 
   } catch (error) {
       console.error(error);
