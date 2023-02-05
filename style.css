@@ -32,10 +32,17 @@ body {
     background-color: #3E8E41;
   }
   
-  #resultContainer {
+  #placeContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
+  }
+  #weatherContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     margin-top: 50px;
   }
   p {

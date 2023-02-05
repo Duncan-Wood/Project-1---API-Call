@@ -5,30 +5,36 @@
 
 //API Keys
 //Weather API Key: 933bde006f044a14a6515410230302
-//Google Maps API Key: AIzaSyAgSgkNWoOIca1vh3nUjZEHq9hOkiwwWio
 
 
 //Global Variables
 const searchBtn = document.querySelector("#searchBtn");
 const cityInput = document.querySelector("#cityInput");
+
 const cityName = document.querySelector("#cityName");
 const region = document.querySelector("#region");
 const time = document.querySelector("#time");
+
 const weather = document.querySelector("#weather");
+const tempF = document.querySelector("#tempF");
 const weatherIcon = document.querySelector("#weatherIcon");
-//having a hard time getting google image to populate. Look for alternatives or ask for help. 
-const image = document.querySelector("#image");
+
+const quote = document.querySelector("#quote");
+const author = document.querySelector("#author");
 
 
 //Functions
 
 //nested async function within event listener and used arrow function
 searchBtn.addEventListener("click", async () => {
+  try {
   const city = cityInput.value;
   const weatherApiUrl = `https://api.weatherapi.com/v1/current.json?key=933bde006f044a14a6515410230302&q=${city}`;
 
   //await is stronger than .then because await pauses the function until the promise settles. This cuts down on the amount of code I need to write.
+  //created a variable called weatherResponse for the inputted URL in case it is needed later
   const weatherResponse = await fetch(weatherApiUrl);
+  //created a variable called weatherData to hold our JSON data
   const weatherData = await weatherResponse.json();
   console.log(weatherData)
   
@@ -36,13 +42,19 @@ searchBtn.addEventListener("click", async () => {
   region.innerHTML = `Region: ${weatherData.location.region}`;
   time.innerHTML = `Time: ${weatherData.location.localtime}`;
   weather.innerHTML = `Weather: ${weatherData.current.condition.text}`;
+  tempF.innerHTML = `Temperature (F): ${weatherData.current.temp_f}`
   weatherIcon.src = weatherData.current.condition.icon;
 
-  //currently struggling to get the Google Maps API to include the specified pictures
-  const googleApiUrl = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${city}&key=AIzaSyAgSgkNWoOIca1vh3nUjZEHq9hOkiwwWio`;
-  const googleResponse = await fetch(googleApiUrl);
-  const googleData = await googleResponse.json();
-  console.log(googleData)
+  //I was running into issues with the CORS policy, meaning that this API was only allowing access from the server, not the client. To get around this, I found a way to add a proxy to the start of my link.
+  const randomQuoteURL = await fetch("https://cors-anywhere.herokuapp.com/http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json")
+  //This variable catches the quote JSON once the link is fetched
+  const quoteData = await randomQuoteURL.json();
+  console.log(quoteData)
 
-  image.src = googleData.results[0].icon;
-  })
+  quote.innerHTML = quoteData.quoteText;
+  author.innerHTML = `-` + quoteData.quoteAuthor;
+
+  } catch (error) {
+      console.error(error);
+  }
+});
