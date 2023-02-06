@@ -11,19 +11,23 @@
 const searchBtn = document.querySelector("#searchBtn");
 const cityInput = document.querySelector("#cityInput");
 
-const cityName = document.querySelector("#cityName");
-const region = document.querySelector("#region");
+const place = document.querySelector("#place");
+// const region = document.querySelector("#region");
 const time = document.querySelector("#time");
 
-const weather = document.querySelector("#weather");
+const weatherCondition = document.querySelector("#weatherCondition");
 const tempF = document.querySelector("#tempF");
 const weatherIcon = document.querySelector("#weatherIcon");
+const windSpeed = document.querySelector("#windSpeed")
+const humidity = document.querySelector("#humidity")
+const precipitationIn = document.querySelector("#precipitationIn")
 
 const quote = document.querySelector("#quote");
 const author = document.querySelector("#author");
 
 
 //Functions
+
 
 //nested async function within event listener and used arrow function
 searchBtn.addEventListener("click", async () => {
@@ -38,14 +42,17 @@ searchBtn.addEventListener("click", async () => {
   const weatherData = await weatherResponse.json();
   console.log(weatherData)
   
-  cityName.innerHTML = `City: ${weatherData.location.name}`;
-  region.innerHTML = `Region: ${weatherData.location.region}`;
+  place.innerHTML = `${weatherData.location.name}, ${weatherData.location.region}`;
   time.innerHTML = `Time: ${weatherData.location.localtime}`;
-  weather.innerHTML = `Weather: ${weatherData.current.condition.text}`;
-  tempF.innerHTML = `Temperature (F): ${weatherData.current.temp_f}`
-  weatherIcon.src = weatherData.current.condition.icon;
 
-  //I was running into issues with the CORS policy, meaning that this API was only allowing access from the server, not the client. To get around this, I found a way to add a proxy to the start of my link.
+  weatherCondition.innerHTML = `Weather: ${weatherData.current.condition.text}`;
+  tempF.innerHTML = `${weatherData.current.temp_f}\u00B0F`
+  weatherIcon.src = weatherData.current.condition.icon;
+  windSpeed.innerHTML = `Wind: ${weatherData.current.gust_mph} mph`
+  humidity.innerHTML = `Humidity: ${weatherData.current.humidity}%`
+  precipitationIn.innerHTML = `Precipitation: ${weatherData.current.precip_in} in`
+
+  //I was running into issues with the CORS policy, meaning that this API was only allowing access from the server, not the client. To get around this, I found a way to add a proxy to the start of my link. For this to work, I must request demo access by clicking the link below.
   const randomQuoteURL = await fetch("https://cors-anywhere.herokuapp.com/http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json")
   //This variable catches the quote JSON once the link is fetched
   const quoteData = await randomQuoteURL.json();
@@ -57,5 +64,6 @@ searchBtn.addEventListener("click", async () => {
 
   } catch (error) {
       console.error(error);
+      //ADD a return statement that appends text specifying where the code went wrong.
   }
 });

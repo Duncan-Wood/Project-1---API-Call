@@ -8,25 +8,32 @@
     <title>Weather API Call</title>
 </head>
 <body>
+    <img src="https://i.imgur.com/mRzdfQR.png" alt="Sunrise Weather" width="300" height="300">
+
     <div id="searchContainer">
-        <input type="text" id="cityInput" placeholder="Enter city name">
+        <input type="text" id="cityInput" placeholder="Enter city or zip code">
         <button id="searchBtn">Search</button>
-        </div>
-          
-          <div class="container" id="placeContainer">
-            <p id="cityName"></p>
-            <p id="region"></p>
-            <p id="time"></p>
-          </div>
-          <div class="container" id="weatherContainer">
-            <p id="weather"></p>
-            <p id="tempF"></p>
-            <img id="weatherIcon">
-          </div>
-          <div id="quoteContainer">
-            <p id="quote"></p>
-            <p id="author"></p>
-          </div>
+    </div>
+
+    <div class="resultContainer">
+      <div id="placeContainer">
+        <p id="place"></p>
+        <p id="time"></p>
+      </div>
+      <div id="weatherContainer">
+        <img id="weatherIcon">
+        <p id="tempF"></p>
+        <p id="weatherCondition"></p>
+        <p id="windSpeed"></p>
+        <p id="humidity"></p>
+        <p id ="precipitationIn"></p>
+      </div>
+  </div>
+
+    <div id="quoteContainer">
+      <p id="quote"></p>
+      <p id="author"></p>
+    </div>
     <div class="citations">
         <section id="weatherApi">
             <p>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
@@ -37,6 +44,13 @@
             <p>Quotes provided by <a href="https://forismatic.com/en/" target="_blank">Forismatic API</a></p>
         </section>
     </div> 
+
 <script src="script.js"></script>
 </body>
 </html>
+
+
+<!-- DEBUGGING:
+- my logo image is not populating.
+- my background image does not fit the screen
+- my quote API only works if the demo link is pressed to bypass CORS -->
