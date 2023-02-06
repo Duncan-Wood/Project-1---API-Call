@@ -32,30 +32,81 @@ body {
 #searchBtn:hover {
   background-color: #3E8E41;
 }
-  
-#resultContainer {
-  display: flex;
-  flex-direction: row;
+
+.resultContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 3fr;
+  grid-template-areas: 
+    "placeContainer placeContainer"
+    "tempF weatherIcon"
+    "weatherCondition weatherIcon"
+    "windSpeed humidity"
+    "precipitationIn humidity";
+  margin: 30px;
+  padding: 10px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #CECECE;
 }
 
 #placeContainer {
+  grid-area: placeContainer;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+#tempF {
+  grid-area: tempF;
+  font-size: x-large;
+}
+
+#weatherCondition {
+  grid-area: weatherCondition;
+  font-size: smaller;
+}
+
+#weatherIcon {
+  grid-area: weatherIcon;
+  width: x-large;
+  height: x-large;
+}
+
+#windSpeed {
+  grid-area: windSpeed;
+  font-size: smaller;
+}
+
+#humidity {
+  grid-area: humidity;
+  font-size: smaller;
+}
+
+#precipitationIn {
+  grid-area: precipitationIn;
+  font-size: smaller;
+}
+
+#quoteContainer {
+  text-align: center;
   margin-top: 50px;
 }
-#weatherContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 50px;
+#quote {
+  font-style: italic;
+  font-size: x-large;
 }
-p {
-  font-size: 20px;
-  margin-bottom: 10px;
+#author {
+  font-style: normal;
+  font-size: smaller;
 }
+
+.citations {
+  text-align: center;
+  font-size: smaller;
+  margin-top: 20px;
+}
+
 #weatherIcon {
   width: 100px;
   height: 100px;
-}
+} 
