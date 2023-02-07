@@ -2,16 +2,32 @@ body {
     font-family: Arial, sans-serif;
     background-color: #F2F2F2;
     background-image: url("https://faithbeliefforum.org/wp-content/uploads/2021/04/peace-mantra-pic-v2-1080x700.png");
+    background-repeat: no-repeat;
     background-size: cover;
-    
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#logo {
+  width: 125px;
+  height: 125px;
+  margin-top: 50px;
+  
+}
 
 #searchContainer {
-    display: flex;
-    justify-content: center;
     margin-top: 50px;
+    height: 50%;
   }
-#cityInput {
+#input {
     padding: 10px;
     font-size: 16px;
     border: none;
@@ -45,7 +61,6 @@ body {
     "precipitationIn humidity";
   margin: 30px;
   padding: 10px;
-  background-color: #FFFFFF;
   border-radius: 10px;
   box-shadow: 0 0 10px #CECECE;
 }
@@ -101,12 +116,11 @@ body {
 }
 
 .citations {
-  text-align: center;
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   font-size: smaller;
-  margin-top: 20px;
+  padding: 10px 0;
 }
-
-#weatherIcon {
-  width: 100px;
-  height: 100px;
-} 

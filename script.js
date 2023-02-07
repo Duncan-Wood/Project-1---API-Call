@@ -2,6 +2,7 @@
 // ChatGPT used for rubberducking and adapted to suit my needs
 // Why I used await instead of .then (https://dev.to/masteringjs/using-then-vs-async-await-in-javascript-2pma)
 // await operator to clean up async function (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
+// CORS anywhere is a service that combines proxy functionality with CORS to allow my quote API to work. (https://github.com/Rob--W/cors-anywhere/issues/301)
 
 //API Keys
 //Weather API Key: 933bde006f044a14a6515410230302
@@ -9,7 +10,7 @@
 
 //Global Variables
 const searchBtn = document.querySelector("#searchBtn");
-const cityInput = document.querySelector("#cityInput");
+const input = document.querySelector("#input");
 
 const place = document.querySelector("#place");
 // const region = document.querySelector("#region");
@@ -32,7 +33,7 @@ const author = document.querySelector("#author");
 //nested async function within event listener and used arrow function
 searchBtn.addEventListener("click", async () => {
   try {
-  const city = cityInput.value;
+  const city = input.value;
   const weatherApiUrl = `https://api.weatherapi.com/v1/current.json?key=933bde006f044a14a6515410230302&q=${city}`;
 
   //await is stronger than .then because await pauses the function until the promise settles. This cuts down on the amount of code I need to write.
