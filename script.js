@@ -2,7 +2,6 @@
 // ChatGPT used for rubberducking and adapted to suit my needs
 // Why I used await instead of .then (https://dev.to/masteringjs/using-then-vs-async-await-in-javascript-2pma)
 // await operator to clean up async function (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
-// CORS anywhere is a service that combines proxy functionality with CORS to allow my quote API to work. (https://github.com/Rob--W/cors-anywhere/issues/301)
 
 //API Keys
 //Weather API Key: 933bde006f044a14a6515410230302
@@ -26,7 +25,6 @@ const precipitationIn = document.querySelector("#precipitationIn")
 
 const quote = document.querySelector("#quote");
 const author = document.querySelector("#author");
-
 
 //Functions
 
