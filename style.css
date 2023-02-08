@@ -1,3 +1,6 @@
+/* Sources:
+I FINALLY got figured out how to use grid thanks to this resource. I can't believe how much is out there that I tried that just didn't work. (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#item_placement) */
+
 body {
     font-family: 'Heebo', sans-serif;
     background-color: #F2F2F2;
@@ -60,7 +63,6 @@ body {
   color: #fff;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  grid-gap: 20px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -71,88 +73,46 @@ body {
   font-size: 14px;
   font-weight: bold;
   background-color: #0000008c;
-  padding: 10px 16px;
+  padding: 0px 16px;
   border-radius: 10px;
 }
-
 
 #weatherIcon {
   grid-row: 2;
   grid-column: 1/span;
   width: 100%;
 }
+#tempF {
+  font-size: 48px;
+}
 
-@media screen and (min-width: 549px) {
+@media screen and (min-width: 550px) {
   .resultContainer {
+    margin: auto;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto 3fr;
-    grid-template-areas: 
-      "locationContainer locationContainer"
-      "tempF weatherIcon"
-      "weatherContainer ."
-      "weatherContainer ."
-      "weatherContainer ."
-      "weatherContainer .";
-    margin: 30px;
-    border-radius: 10px;
+    grid-template-columns: repeat(3, 1fr);
     box-shadow: 0 0 10px #CECECE;
     text-shadow: 0 0 5px #17243280;
     background-color: rgba(118, 118, 118, 0.5);
     color: #fff;
-  }
-
-  #weatherContainer {
-    padding: 0px 15px;
-  }
-
-  #locationContainer {
-    grid-area: locationContainer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #0000008c;
-    padding: 10px 16px;
     border-radius: 10px;
   }
 
-  #tempF {
-    grid-area: tempF;
+  .box1 {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #0000008c;
+  }
+  .box2 {
     font-size: 48px;
     font-family: 'Heebo', sans-serif;
     font-weight: 400;
     padding: 10px 15px;
-  }
-
-  #weatherCondition {
-    grid-area: weatherCondition;
-    font-size: smaller;
-  }
-
-  #weatherIcon {
-    grid-area: weatherIcon;
-    width: 150px;
-    height: 150px;
-    padding: 10px 16px;
-    justify-self: end;
-    align-self: start;
-  }
-
-  #windSpeed {
-    grid-area: windSpeed;
-    font-size: smaller;
-  }
-
-  #humidity {
-    grid-area: humidity;
-    font-size: smaller;
-  }
-
-  #precipitationIn {
-    grid-area: precipitationIn;
-    font-size: smaller;
+    grid-row: 2;
+    grid-column: 1;
   }
 }
 
@@ -172,7 +132,6 @@ body {
   font-size: normal;
   text-shadow: 0 0 5px whitesmoke;
 }
-
 .citations {
   margin-top: auto;
   width: 100%;
