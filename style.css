@@ -48,6 +48,10 @@ body {
   background-color: #3E8E41;
 }
 
+/* .hide {
+  display: none;
+} */
+
 .resultContainer {
   display: grid;
   grid-template-columns: auto auto;
@@ -66,6 +70,9 @@ body {
   color: #fff;
 }
 
+#weatherContainer {
+  padding: 0px 15px;
+}
 
 #placeContainer {
   grid-area: placeContainer;
@@ -85,7 +92,7 @@ body {
   font-size: 48px;
   font-family: 'Heebo', sans-serif;
   font-weight: 400;
-  padding: 10px 16px;
+  padding: 10px 15px;
 }
 
 

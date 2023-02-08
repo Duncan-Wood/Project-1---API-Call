@@ -12,8 +12,9 @@
 const searchBtn = document.querySelector("#searchBtn");
 const input = document.querySelector("#input");
 
+const resultContainer = document.querySelector(".resultContainer");
+
 const place = document.querySelector("#place");
-// const region = document.querySelector("#region");
 const time = document.querySelector("#time");
 
 const weatherCondition = document.querySelector("#weatherCondition");
@@ -29,10 +30,10 @@ const author = document.querySelector("#author");
 
 //Functions
 
-
 //nested async function within event listener and used arrow function
 searchBtn.addEventListener("click", async () => {
   try {
+  resultContainer.style.display = "grid"
   const city = input.value;
   const weatherApiUrl = `https://api.weatherapi.com/v1/current.json?key=933bde006f044a14a6515410230302&q=${city}`;
 
@@ -54,17 +55,19 @@ searchBtn.addEventListener("click", async () => {
   precipitationIn.innerHTML = `Precipitation: ${weatherData.current.precip_in} in`
 
   //I was running into issues with the CORS policy, meaning that this API was only allowing access from the server, not the client. To get around this, I found a way to add a proxy to the start of my link. For this to work, I must request demo access by clicking the link below.
-  const randomQuoteURL = await fetch("https://cors-anywhere.herokuapp.com/http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json")
+  const randomQuoteURL = await fetch("https://api.quotable.io/random")
   //This variable catches the quote JSON once the link is fetched
   const quoteData = await randomQuoteURL.json();
   console.log(quoteData)
 
-  quote.innerHTML = quoteData.quoteText;
+  quote.innerHTML = quoteData.content;
   //added a ternary operator to my author code in which the author will get populated if it returns truthy, or if no author is provided it returns falsy and the word anonymous is placed.
-  author.innerHTML = `-` + (quoteData.quoteAuthor ? quoteData.quoteAuthor : "Anonymous");
+  author.innerHTML = `-` + (quoteData.author ? quoteData.author : "Anonymous");
 
   } catch (error) {
       console.error(error);
       //ADD a return statement that appends text specifying where the code went wrong.
   }
 });
+
+resultContainer.style.display = "none";

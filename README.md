@@ -12,9 +12,12 @@ Sunrise weather is a single-page website designed to display current weather inf
 - CSS
 - JavaScript
 
+## Requirements
+- Internet connection
+
 ## APIs:
 - [WeatherAPI.com](https://www.weatherapi.com/)
-- [Forismatic API](https://forismatic.com/en/api/)
+- [Quotable](https://github.com/lukePeavey/quotable#get-random-quote)
 
 ## Limitations:
 - the quote API requires a CORS bypass by using the demo link
