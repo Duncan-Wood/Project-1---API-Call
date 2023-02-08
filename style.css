@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Heebo', sans-serif;
     background-color: #F2F2F2;
     background-image: url("https://faithbeliefforum.org/wp-content/uploads/2021/04/peace-mantra-pic-v2-1080x700.png");
     background-repeat: no-repeat;
@@ -13,14 +13,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  margin-bottom: 30px;
 }
 
 #logo {
   width: 125px;
   height: 125px;
   margin-top: 50px;
-  
 }
 
 #searchContainer {
@@ -51,21 +50,22 @@ body {
 
 .resultContainer {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: auto auto;
   grid-template-rows: auto 3fr;
   grid-template-areas: 
     "placeContainer placeContainer"
     "tempF weatherIcon"
-    "weatherCondition weatherIcon"
-    "windSpeed humidity"
-    "precipitationIn humidity";
+    "weatherContainer ."
+    "weatherContainer ."
+    "weatherContainer ."
+    "weatherContainer .";
   margin: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px #CECECE;
   text-shadow: 0 0 5px #17243280;
   color: #fff;
-  /* padding: 10px 16px;    */
 }
+
 
 #placeContainer {
   grid-area: placeContainer;
@@ -82,11 +82,12 @@ body {
 
 #tempF {
   grid-area: tempF;
-  /* font-size: x-large; */
   font-size: 48px;
   font-family: 'Heebo', sans-serif;
   font-weight: 400;
+  padding: 10px 16px;
 }
+
 
 #weatherCondition {
   grid-area: weatherCondition;
@@ -95,10 +96,11 @@ body {
 
 #weatherIcon {
   grid-area: weatherIcon;
-  /* width: x-large;
-  height: x-large; */
   width: 150px;
   height: 150px;
+  padding: 10px 16px;
+  justify-self: end;
+  align-self: start;
 }
 
 #windSpeed {
@@ -115,6 +117,7 @@ body {
   grid-area: precipitationIn;
   font-size: smaller;
 }
+
 
 #quoteContainer {
   text-align: center;
@@ -141,3 +144,4 @@ body {
   font-size: smaller;
   padding: 10px 0;
 }
+

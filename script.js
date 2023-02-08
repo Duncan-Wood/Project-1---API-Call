@@ -46,7 +46,7 @@ searchBtn.addEventListener("click", async () => {
   place.innerHTML = `${weatherData.location.name}, ${weatherData.location.region}`;
   time.innerHTML = `Time: ${weatherData.location.localtime}`;
 
-  weatherCondition.innerHTML = `Weather: ${weatherData.current.condition.text}`;
+  weatherCondition.innerHTML = `Condition: ${weatherData.current.condition.text}`;
   tempF.innerHTML = `${weatherData.current.temp_f}\u00B0F`
   weatherIcon.src = weatherData.current.condition.icon;
   windSpeed.innerHTML = `Wind: ${weatherData.current.gust_mph} mph`

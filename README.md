@@ -1,47 +1,37 @@
-# Project-1---API-Call
-For project 1, I will use the weather API from [weather API](https://www.weatherapi.com/) to create an interactive site for users to check the current weather!
+# Sunrise Weather:
+Sunrise weather is a single-page website designed to display current weather information from a weather API. Additionally, the website displays a random quote to help users feel better about their day.
 
-This API is very powerful because it contains up-to-date information on weather around the world from temperature to wind speed. I plan on using the various pieces of data to create a dynamic result depending on if it is rainy, sunny, or cloudy. My site will also incorperate suggestions for clothing or accessories. For example, if it is raining, the text at the bottom will suggest the user to bring an umbrella. I will create a Trello board to set and reach daily goals and continue innovating the design and functionality of my site. 
+## Features:
+- Enter a city name or zip code and pull accurate information from a weather API
+- Region, time, current weather, condition, wind speed, humidity, and precipitation are all pulled from the weather API
+- when weather data is populated, this website also populates a random inspirational quote from a seperate API to be displayed below the weather
+- The data pulled from the API's displays on the screen in an elegantly, designed way.
 
-Find a general layout of what my site will look like on Figma, although this is only my first draft. 
+## Languages Used:
+- HTML
+- CSS
+- JavaScript
 
+## APIs:
+- [WeatherAPI.com](https://www.weatherapi.com/)
+- [Forismatic API](https://forismatic.com/en/api/)
 
-##MVP 
-- Create a Trello board planning out the rest of project week so that by the end of my work I will have 20 meaningful git commits
-- fully explore the [weather API](https://www.weatherapi.com) more in depth to get a better sense of all of the data I have to work with. For example, I want to find all the possible conditions of weather (clear, cloudy, partially cloudy, etc.) so that I can create a polymorphous design. 
-- Dedicate time to psuedocode for my HTML, CSS, and Javascript
-    - Figure out what global variables I need
-    - Plan out what functions I need 
-    - Push myself with CSS and plan out an elegant design
-- add a catch method into my async function in order to prevent my code from breaking if unable to fulfill a promise. 
+## Limitations:
+- the quote API requires a CORS bypass by using the demo link
+- the logos only work if the assets are downloaded locally
 
+## MVPs:
+1. Users can enter a city name or zip code and the website will display current weather information
+2. The weather information displayed is the city, region, time, temperature (F), condition icon, condition name, wind speed (mph), humidity, and precipitation (in)
+3. When the weather information is displayed, a random quote will also be generated below the weather information 
+4. The website is elegantly designed, including a background image, stylized text, and a custom logo
+5. weatherAPI.com and Forismatic API are properly cited
 
-##Stretch Goals
-- Correctly utilize the await operator instead of .then() in order to create a more elegant and readable design for my code. 
-- A weather API call is probably one of the most common projects of all beginner coders. Think about what I can do to make mine stand out!
-- Add an inspirational quote of the day at the bottom of my weather API
-
-###Designing my Site
-- Useful Properties for Divs: 
-    - display: flex;
-    - display: box;
-    - justify-content: space-between;
-    - text-shadow: 0 0 5px #17243280;
-    - color: #fff;
-    - textOverlay: #fff; (for links)
-    - backgroundCard: #fff;
-    - backgroundInverseOverlay: #0000008c;
-    - primaryButtonText: #fff
-    - font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    - font-size: 72px;
-    - line-height: 1.5;
-    - box-sizing: border-box;
-- body properties:
-    - margin: 0;
-    - display: block;
-    - background-attachment: fixed;
-    - position: absolute;
-    - width: 205px;
-    - height: 205px;
-    - padding: 27px 0;
-    - text-align: center;
+## Flex Goals:
+- continue styling the resultContainer div to more elequently display the information
+- Add an option for users to view the temperature in either Fahrenheit or Celsius
+- create a mobile-first design that can better adjust the contents of the page in any given aspect ratio
+- add a 5 day forecast div to be displayed before the current day weather information
+- allow users to save several locations and view the weather differences if they desire
+- add functionality to switch between light and dark mode
+- Add an option for the user to select a custom background image
