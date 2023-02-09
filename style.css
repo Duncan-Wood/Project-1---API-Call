@@ -1,14 +1,8 @@
-/* Sources:
-I FINALLY got figured out how to use grid thanks to this resource. I can't believe how much is out there that I tried that just didn't work. (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#item_placement) */
-
 body {
     font-family: 'Heebo', sans-serif;
-    background-color: #F2F2F2;
     background-image: url("https://faithbeliefforum.org/wp-content/uploads/2021/04/peace-mantra-pic-v2-1080x700.png");
-    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
@@ -18,16 +12,13 @@ body {
   justify-content: center;
   margin-bottom: 30px;
 }
-
 #logo {
   width: 175px;
   height: 175px;
   margin-top: 50px;
 }
-
 #searchContainer {
     margin-top: 50px;
-    height: 50%;
   }
 #input {
     padding: 10px;
@@ -56,36 +47,34 @@ body {
   margin: auto;
   display:grid;
   border-radius: 10px;
-  width:fit-content;
   box-shadow: 0 0 10px #CECECE;
   text-shadow: 0 0 5px #17243280;
   background-color: rgba(118, 118, 118, 0.5);
   color: #fff;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  justify-content: center;
   align-items: center;
   text-align: center;
 }
-
 .locationContainer{
   justify-content: space-between;
-  font-size: 14px;
-  font-weight: bold;
   background-color: #0000008c;
   padding: 0px 16px;
   border-radius: 10px;
 }
-
 #weatherIcon {
   grid-row: 2;
-  grid-column: 1/span;
   width: 100%;
 }
-#tempF {
-  font-size: 48px;
+.box1 {
+  font-size: large;
+  background-color: #0000008c;
 }
-
+.box2 {
+  font-size: 48px;
+  font-family: 'Heebo', sans-serif;
+}
+.box3 {
+  padding: 10px 15px;
+}
 /* .fiveDay {
   display:flex;
   margin: auto;
@@ -93,7 +82,6 @@ body {
   justify-content: center;
   align-items: center;
 } */
-
 @media screen and (min-width: 550px) {
   .resultContainer {
     margin: auto;
@@ -105,44 +93,27 @@ body {
     color: #fff;
     border-radius: 10px;
   }
-
   .box1 {
-    display: flex;
+    display:flex;
     grid-column-start: 1;
     grid-column-end: 4;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #0000008c;
   }
   .box2 {
-    font-size: 48px;
-    font-family: 'Heebo', sans-serif;
-    font-weight: 400;
-    padding: 10px 15px;
     grid-row: 2;
     grid-column: 1;
   }
 }
-
 #quoteContainer {
   text-align: center;
   justify-content: center;
   margin-top: 50px;
+  text-shadow: 0 0 5px whitesmoke;
 }
 #quote {
   font-style: italic;
   font-size: x-large;
-  text-shadow: 0 0 5px whitesmoke;
-
-}
-#author {
-  font-style: normal;
-  font-size: normal;
-  text-shadow: 0 0 5px whitesmoke;
 }
 .citations {
-  margin-top: auto;
-  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
