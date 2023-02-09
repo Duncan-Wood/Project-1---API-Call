@@ -116,7 +116,7 @@ body {
 .citations {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: end;
   font-size: smaller;
   padding: 10px 0;
 }
