@@ -1,11 +1,10 @@
 //Sources
 // ChatGPT used for rubberducking and adapted to suit my needs
-// Why I used await instead of .then (https://dev.to/masteringjs/using-then-vs-async-await-in-javascript-2pma)
-// await operator to clean up async function (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
+// Why I used await instead of .then (https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
+
 
 //API Key:
 //Weather API Key: 933bde006f044a14a6515410230302
-
 
 //Global Variables
 
@@ -35,7 +34,6 @@ const author = document.querySelector("#author");
 
 
 //Functions
-
 //nested async function within event listener and used arrow function
 searchBtn.addEventListener("click", async () => {
   try {
@@ -43,10 +41,8 @@ searchBtn.addEventListener("click", async () => {
 
   const city = input.value;
   const weatherApiUrl = `https://api.weatherapi.com/v1/current.json?key=933bde006f044a14a6515410230302&q=${city}`;
-  //await is stronger than .then because await pauses the function until the promise settles. This cuts down on the amount of code I need to write.
+  // I decided to use await instead of promise chaining with .then in order to make my code more readable. While await does have some limitations, it seems to be generally more elegant in design. 
   const weatherResponse = await fetch(weatherApiUrl);
-  
-  //created a variable called weatherData to hold our JSON data
   const weatherData = await weatherResponse.json();
   console.log(weatherData)
 
@@ -60,14 +56,13 @@ searchBtn.addEventListener("click", async () => {
   precipitationIn.innerHTML = `Precipitation: ${weatherData.current.precip_in} in`
 
   const randomQuoteURL = await fetch("https://api.quotable.io/random")
-  //This variable catches the quote JSON once the link is fetched
   const quoteData = await randomQuoteURL.json();
   console.log(quoteData)
   quote.innerHTML = quoteData.content;
   //added a ternary operator to my author code in which the author will get populated if it returns truthy, or if no author is provided it returns falsy and the word anonymous is placed.
   author.innerHTML = `-` + (quoteData.author ? quoteData.author : "Anonymous");
 
-    // fiveDayContainers.style.display = "flex";
+  // fiveDayContainers.style.display = "flex";
   // const weatherAPIFiveDayURL = `http://api.weatherapi.com/v1/forecast.json?key=933bde006f044a14a6515410230302&q=${city}&days=6&aqi=no&alerts=no`
   // const weatherResponseFiveDay = await fetch(weatherAPIFiveDayURL);
   // const weatherDataFiveDay = await weatherResponseFiveDay.json();

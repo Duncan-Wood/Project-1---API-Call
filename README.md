@@ -1,11 +1,11 @@
 # Sunrise Weather:
-Sunrise weather is a single-page website designed to display current weather information from a weather API. Additionally, the website displays a random quote to help users feel better about their day.
+Sunrise weather is a single-page website designed to display current weather information from a weather API. Additionally, the website displays a random quote to help users brighten up their day.
 
 ## Features:
 - Enter a city name or zip code and pull accurate information from a weather API
 - Region, time, current weather, condition, wind speed, humidity, and precipitation are all pulled from the weather API
 - when weather data is populated, this website also populates a random inspirational quote from a seperate API to be displayed below the weather
-- The data pulled from the API's displays on the screen in an elegantly, designed way.
+- The data pulled from the API's is elegantly displayed on the screen with responsive sizing.
 
 ## Languages Used:
 - HTML
@@ -20,15 +20,14 @@ Sunrise weather is a single-page website designed to display current weather inf
 - [Quotable](https://github.com/lukePeavey/quotable#get-random-quote)
 
 ## Limitations:
-- the quote API requires a CORS bypass by using the demo link
-- the logos only work if the assets are downloaded locally
+- the Sunrise logos only work if the assets are available locally
 
 ## MVPs:
 1. Users can enter a city name or zip code and the website will display current weather information
 2. The weather information displayed is the city, region, time, temperature (F), condition icon, condition name, wind speed (mph), humidity, and precipitation (in)
 3. When the weather information is displayed, a random quote will also be generated below the weather information 
 4. The website is elegantly designed, including a background image, stylized text, and a custom logo
-5. weatherAPI.com and Forismatic API are properly cited
+5. weatherAPI.com and Quotable API are properly cited
 
 ## Flex Goals:
 - continue styling the resultContainer div to more elequently display the information
