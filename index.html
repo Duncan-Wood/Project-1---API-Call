@@ -20,35 +20,120 @@
     </div>
   </div>
 
-    <div class="resultContainer" style="display:none">
-      <div class="locationContainer box1">
-        <p id="place"></p>
-        <p id="time"></p>
-      </div>
-        <p class="box2" id="tempF"></p>
-        <img id="weatherIcon">
-      <div class="box3" id="weatherContainer">
-        <p id="weatherCondition"></p>
-        <p id="windSpeed"></p>
-        <p id="humidity"></p>
-        <p id ="precipitationIn"></p>
-      </div>
+  <div class="resultContainer" style="display:none">
+    <div class="locationContainer box1">
+      <p id="place"></p>
+      <p id="time"></p>
+    </div>
+      <p class="box2" id="tempF"></p>
+      <img class="icon" id="weatherIcon">
+    <div class="box3" id="weatherContainer">
+      <p id="weatherCondition"></p>
+      <p id="windSpeed"></p>
+      <p id="humidity"></p>
+      <p id ="precipitationIn"></p>
+    </div>
   </div>
 
-    <div id="quoteContainer">
-      <p id="quote"></p>
-      <p id="author"></p>
+<!-- Attempting to add 5 day forecast! -->
+  <div class="fiveDay" style="display:none">
+    <div id="day1">
+      <!-- style="display:none" -->
+      <div class="resultContainer">
+        <div class="locationContainer box1">
+          <p class="date" id="dateOne"></p>
+        </div>
+          <p class="box2" id="tempFOne"></p>
+          <img id="weatherIconOne">
+        <div class="box3" id="weatherContainer">
+          <p id="weatherConditionOne"></p>
+          <p id="windSpeed"></p>
+          <p id="humidity"></p>
+          <p id ="precipitationIn"></p>
+        </div>
+      </div>
     </div>
-    <div class="citations">
-        <section id="weatherApi">
-            <p>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
-                <a href="https://www.weatherapi.com/" title="Free Weather API"><img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" border="0"></a>
-            </p>
-        </section>
-        <section id="quoteApi">
-            <p>Quotes provided by <a href="https://github.com/lukePeavey/quotable#get-random-quote" target="_blank">Quotable</a></p>
-        </section>
-    </div> 
+    <div id="day2">
+      <div class="resultContainer">
+        <div class="locationContainer box1">
+          <p id="place"></p>
+          <p id="time"></p>
+        </div>
+          <p class="box2" id="tempF"></p>
+          <img id="weatherIcon">
+        <div class="box3" id="weatherContainer">
+          <p id="weatherCondition"></p>
+          <p id="windSpeed"></p>
+          <p id="humidity"></p>
+          <p id ="precipitationIn"></p>
+        </div>
+      </div>
+    </div>
+    <div id="day3">
+      <div class="resultContainer">
+        <div class="locationContainer box1">
+          <p id="place"></p>
+          <p id="time"></p>
+        </div>
+          <p class="box2" id="tempF"></p>
+          <img id="weatherIcon">
+        <div class="box3" id="weatherContainer">
+          <p id="weatherCondition"></p>
+          <p id="windSpeed"></p>
+          <p id="humidity"></p>
+          <p id ="precipitationIn"></p>
+        </div>
+      </div>
+    </div>
+    <div id="day4">
+      <div class="resultContainer">
+        <div class="locationContainer box1">
+          <p id="place"></p>
+          <p id="time"></p>
+        </div>
+          <p class="box2" id="tempF"></p>
+          <img id="weatherIcon">
+        <div class="box3" id="weatherContainer">
+          <p id="weatherCondition"></p>
+          <p id="windSpeed"></p>
+          <p id="humidity"></p>
+          <p id ="precipitationIn"></p>
+        </div>
+      </div>
+    </div>
+    <div class="day5">
+      <div class="resultContainer">
+        <div class="locationContainer box1">
+          <p id="place"></p>
+          <p id="time"></p>
+        </div>
+          <p class="box2" id="tempF"></p>
+          <img id="weatherIcon">
+        <div class="box3" id="weatherContainer">
+          <p id="weatherCondition"></p>
+          <p id="windSpeed"></p>
+          <p id="humidity"></p>
+          <p id ="precipitationIn"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="quoteContainer">
+    <p id="quote"></p>
+    <p id="author"></p>
+  </div>
+  <div class="citations">
+      <section id="weatherApi">
+          <p>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+              <a href="https://www.weatherapi.com/" title="Free Weather API"><img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" border="0"></a>
+          </p>
+      </section>
+      <section id="quoteApi">
+          <p>Quotes provided by <a href="https://github.com/lukePeavey/quotable#get-random-quote" target="_blank">Quotable</a></p>
+      </section>
+  </div> 
 
 <script src="script.js"></script>
 </body>
