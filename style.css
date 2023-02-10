@@ -108,7 +108,7 @@ body {
 #quoteContainer {
   text-align: center;
   justify-content: center;
-  margin-top: 50px;
+  margin: 50px 50px 0 50px;
   text-shadow: 0 0 5px whitesmoke;
 }
 #quote {
