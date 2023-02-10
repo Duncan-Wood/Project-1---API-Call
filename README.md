@@ -1,6 +1,9 @@
 # Sunrise Weather:
 Sunrise weather is a single-page website designed to display current weather information from a weather API. Additionally, the website displays a random quote to help users brighten up their day.
 
+## Try it out:
+[Sunrise Weather](sunrise-weather.surge.sh)
+
 ## Features:
 - Enter a city name or zip code and pull accurate information from a weather API
 - Region, time, current weather, condition, wind speed, humidity, and precipitation are all pulled from the weather API
@@ -21,6 +24,7 @@ Sunrise weather is a single-page website designed to display current weather inf
 
 ## Limitations:
 - the Sunrise logos only work if the assets are available locally
+- weatherAPI only works because I am in a free trial period. Trial ends 02/17/23 and then I would need to pay for a developer plan
 
 ## MVPs:
 1. Users can enter a city name or zip code and the website will display current weather information
