@@ -1,5 +1,5 @@
 # Sunrise Weather:
-Sunrise weather is a single-page website designed to display current weather information from a weather API. Additionally, the website displays a random quote to help users brighten up their day.
+Sunrise weather is a single-page website designed to display current weather information from a weather API. Additionally, the website displays a random inspirational quote to help users brighten up their day.
 
 ## Try it out:
 [Sunrise Weather](https://sunrise-weather.surge.sh/)
