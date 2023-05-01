@@ -1,5 +1,5 @@
 # Welcome to Sunrise Weather!
-![Sunrise Weather Screenshot](./assets/sunrise-weather-screenshot.png)
+![Sunrise Weather Screenshot](./Assets/sunrise-weather-screenshot.png)
 
 ## Try it out:
 [Sunrise Weather](https://sunrise-weather.surge.sh/)
